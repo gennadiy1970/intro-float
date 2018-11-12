@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Float</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"
+      integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <section><h1>Float</h1></section>
+      <section>
+        <h2>Обтекание + очистка</h2>
+        <ul>
+          <li>float: left;</li>
+          <li>clear: left;</li>
+          <li>float: right;</li>
+          <li>clear: rigth;</li>
+          <li>clear: both;</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Обтекание</h3>
+        <h4>float: right</h4>
+        <div class="img-wrp f-right">
+          <img src="./img/night.jpg" alt="night" />
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus quod voluptate quidem consequatur earum nostrum id
+          consequuntur. Dolore sint, architecto voluptate nostrum enim a nam
+          molestias possimus iste numquam totam.
+        </p>
+        <p>
+          Sint doloremque nostrum velit, voluptatem iste, officiis in,
+          consequuntur nobis maiores itaque nam est quo non quod porro nulla
+          accusamus eum deleniti dicta dignissimos minima. Eos perferendis
+          molestiae reprehenderit dolorum. Nihil eos ipsa consectetur
+          consequuntur qui enim et rem quis, error soluta? Deserunt
+          necessitatibus vel assumenda sapiente molestias est ipsum aut
+          voluptatum fugit. Reiciendis vitae quod laudantium tempora, eveniet
+          quis?
+        </p>
+      </section>
+      <section>
+        <h3>Обтекание</h3>
+        <h4>float: left</h4>
+        <div class="img-wrp f-left">
+          <img src="./img/night.jpg" alt="night" />
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus quod voluptate quidem consequatur earum nostrum id
+          consequuntur. Dolore sint, architecto voluptate nostrum enim a nam
+          molestias possimus iste numquam totam. Sint doloremque nostrum velit,
+          voluptatem iste, officiis in, consequuntur nobis maiores itaque nam
+          est quo non quod porro nulla accusamus eum deleniti dicta dignissimos
+          minima.
+        </p>
+        <p>
+          Eos perferendis molestiae reprehenderit dolorum. Nihil eos ipsa
+          consectetur consequuntur qui enim et rem quis, error soluta? Deserunt
+          necessitatibus vel assumenda sapiente molestias est ipsum aut
+          voluptatum fugit. Reiciendis vitae quod laudantium tempora, eveniet
+          quis?
+        </p>
+      </section>
+
+      <section>
+        <h3>Обтекание требует очистки</h3>
+        <p>Высота текста меньше высоты float</p>
+        <h4>float: right</h4>
+        <div class="img-wrp f-right">
+          <img src="./img/night.jpg" alt="night" />
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus quod voluptate quidem consequatur earum nostrum id
+          consequuntur. Dolore sint, architecto voluptate nostrum enim a nam
+          molestias possimus iste numquam totam.
+        </p>
+        <div class="box">BOX</div>
+      </section>
+      <section>
+        <h3>Обтекание + очистка</h3>
+        <h4>img {float: right}</h4>
+        <h4>.box {clear: right}</h4>
+        <div class="img-wrp f-right">
+          <img src="./img/night.jpg" alt="night" />
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Necessitatibus quod voluptate quidem consequatur earum nostrum id
+          consequuntur. Dolore sint, architecto voluptate nostrum enim a nam
+          molestias possimus iste numquam totam.
+        </p>
+        <div class="box clear">BOX</div>
+      </section>
+      <section>
+        <h3>Обтекание + очистка</h3>
+        <h4>Очистка - обертка с классом clearfix</h4>
+        <details>
+          <summary>clearfix</summary>
+          <pre> <code>
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+        </code></pre></details>
+        <div class="clearfix">
+          <div class="img-wrp f-right">
+            <img src="./img/night.jpg" alt="night" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus quod voluptate quidem consequatur earum nostrum id
+            consequuntur. Dolore sint, architecto voluptate nostrum enim a nam
+            molestias possimus iste numquam totam.
+          </p>
+        </div>
+        <div class="box">BOX</div>
+      </section>
+      <section>
+          <h2>overflow: hidden вместо clear</h2>
+          <p>Задается обертке. Возможный, но менее предпочтительный способ</p>
+          <details>
+                <summary>overflow</summary>
+                <pre> <code>
+      .overflow {
+        overflow: hiiden;
+      }
+              </code></pre></details>
+              <div class="overflow">
+                <div class="img-wrp f-right">
+                  <img src="./img/night.jpg" alt="night" />
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Necessitatibus quod voluptate quidem consequatur earum nostrum id
+                  consequuntur. Dolore sint, architecto voluptate nostrum enim a nam
+                  molestias possimus iste numquam totam.
+                </p>
+              </div>
+              <div class="box">BOX</div>
+      </section>
+      <section>
+          <h2>FLOAT как способ управления блоками</h2>
+          <h3>float: left;</h3>
+          <h4>Зачистки нет, высота родителя 0</h4>
+          <p>Нижний блок занимает место блока с float</p>
+          <p>Текст в нижнем блок обтекает элементы с float</p>
+          
+          <div class="boxes">
+              <div class="boxing boxing-left">1</div>
+              <div class="boxing boxing-left">2</div>
+              <div class="boxing boxing-left">3</div>
+              <div class="boxing boxing-left">4</div>
+              <div class="boxing boxing-left">5</div>
+              <div class="boxing boxing-left">6</div>
+          </div>
+          <div class="blue-box">Нижний блок</div>
+      </section>
+      <section>
+          <h2>FLOAT как способ управления блоками</h2>
+          <h3>float: right;</h3>
+          <h4>Зачистки нет, высота родителя 0</h4>
+          <p>Нижний блок занимает место блока с float</p>
+          <p>Текст в нижнем блок обтекает элементы с float</p>
+          <div class="boxes">
+              <div class="boxing boxing-right">1</div>
+              <div class="boxing boxing-right">2</div>
+              <div class="boxing boxing-right">3</div>
+              <div class="boxing boxing-right">4</div>
+              <div class="boxing boxing-right">5</div>
+              <div class="boxing boxing-right">6</div>
+          </div>
+          <div class="blue-box">Нижний блок</div>
+      </section>
+
+
+      <section>
+            <h2>FLOAT как способ управления блоками</h2>
+            <h3>float: right; float: left;</h3>
+            <h4>Порядок объявления float определяет приоритет расстановки</h4>
+            <div class="boxes">
+                <div class="boxing boxing-right">1r</div>
+                <div class="boxing boxing-right">2r</div>
+                <div class="boxing boxing-right">3r</div>
+                <div class="boxing boxing-left">4l</div>
+                <div class="boxing boxing-left">5l</div>
+                <div class="boxing boxing-left">6l</div>
+            </div>
+            <div class="blue-box">Нижний блок</div>
+        </section>
+        <section>
+            <h2>FLOAT как способ управления блоками</h2>
+            <h4>Порядок объявления float определяет приоритет расстановки</h4>
+            <h3>float: left; float: right;</h3>
+            <div class="boxes">
+                <div class="boxing boxing-left">1l</div>
+                <div class="boxing boxing-left">2l</div>
+                <div class="boxing boxing-left">3l</div>
+                <div class="boxing boxing-right">4r</div>
+                <div class="boxing boxing-right">5r</div>
+                <div class="boxing boxing-right">6r</div>
+            </div>
+            <div class="blue-box">Нижний блок</div>
+        </section>
+
+
+
+
+
+
+
+
+      <section>
+            <h2>FLOAT как способ управления блоками</h2>
+            <h3>float: left;</h3>
+            <h4>Зачистки clerfix для родителя</h4>
+            <div class="boxes clearfix">
+                <div class="boxing boxing-left">1</div>
+                <div class="boxing boxing-left">2</div>
+                <div class="boxing boxing-left">3</div>
+                <div class="boxing boxing-left">4</div>
+                <div class="boxing boxing-left">5</div>
+                <div class="boxing boxing-left">6</div>
+            </div>
+            <div class="blue-box">Нижний блок</div>
+        </section>
+        <section>
+            <h2>FLOAT как способ управления блоками</h2>
+            <h3>float: right;</h3>
+            <h4>Зачистки clerfix для родителя</h4>
+            <div class="boxes clearfix">
+                <div class="boxing boxing-right">1</div>
+                <div class="boxing boxing-right">2</div>
+                <div class="boxing boxing-right">3</div>
+                <div class="boxing boxing-right">4</div>
+                <div class="boxing boxing-right">5</div>
+                <div class="boxing boxing-right">6</div>
+            </div>
+            <div class="blue-box">Нижний блок</div>
+        </section>
+        <section>
+            <h2>FLOAT как инструмент верстки макета</h2>
+            <h3>2 column layout</h3>
+            <div class="clearfix">
+                <aside class="aside-2column">Aside</aside>
+                <main class="main-2column">Main</main>
+            </div>
+        </section>
+        <section>
+            <h2>FLOAT как инструмент верстки макета</h2>
+            <h3>3 column layout</h3>
+
+        </section>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
